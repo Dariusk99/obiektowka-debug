@@ -1,0 +1,14 @@
+/Users/prociow/StudioProjects/Blocks/Blocks/bin/Debug/net10.0/Blocks
+/Users/prociow/StudioProjects/Blocks/Blocks/bin/Debug/net10.0/Blocks.deps.json
+/Users/prociow/StudioProjects/Blocks/Blocks/bin/Debug/net10.0/Blocks.runtimeconfig.json
+/Users/prociow/StudioProjects/Blocks/Blocks/bin/Debug/net10.0/Blocks.dll
+/Users/prociow/StudioProjects/Blocks/Blocks/bin/Debug/net10.0/Blocks.pdb
+/Users/prociow/StudioProjects/Blocks/Blocks/obj/Debug/net10.0/Blocks.GeneratedMSBuildEditorConfig.editorconfig
+/Users/prociow/StudioProjects/Blocks/Blocks/obj/Debug/net10.0/Blocks.AssemblyInfoInputs.cache
+/Users/prociow/StudioProjects/Blocks/Blocks/obj/Debug/net10.0/Blocks.AssemblyInfo.cs
+/Users/prociow/StudioProjects/Blocks/Blocks/obj/Debug/net10.0/Blocks.csproj.CoreCompileInputs.cache
+/Users/prociow/StudioProjects/Blocks/Blocks/obj/Debug/net10.0/Blocks.dll
+/Users/prociow/StudioProjects/Blocks/Blocks/obj/Debug/net10.0/refint/Blocks.dll
+/Users/prociow/StudioProjects/Blocks/Blocks/obj/Debug/net10.0/Blocks.pdb
+/Users/prociow/StudioProjects/Blocks/Blocks/obj/Debug/net10.0/Blocks.genruntimeconfig.cache
+/Users/prociow/StudioProjects/Blocks/Blocks/obj/Debug/net10.0/ref/Blocks.dll
