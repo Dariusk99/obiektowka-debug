@@ -1,10 +1,13 @@
-﻿namespace Blocks_Main
+﻿using System;
+
+namespace Blocks_Main
 {
     internal class EquilateralTriangle :Triangle
     {
-
-        public EquilateralTriangle(int a):base(a,a,a)
+        // changed int a to double a
+        public EquilateralTriangle(double a):base(a,a,a)
         {
+            if (a <= 0) throw new ArgumentException("Give side greater than 0");
         }
     }
 }

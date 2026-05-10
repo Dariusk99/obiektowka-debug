@@ -1,25 +1,33 @@
-﻿namespace Blocks_Main
+﻿using System;
+
+namespace Blocks_Main
 {
-    public class triangle : NamedObject, IShape
+    // triangle -> Triangle
+    public class Triangle : NamedObject, IShape
     {
         public double A {  get; set; } //Zmienne zawierające długości boków
         public double B { get; set; }
         public double C { get; set; }
 
-        public Triangle (double a, double b,double c):base("trójkąt")
+        public Triangle (double A, double B, double C):base("trójkąt")
         {
+            if (A <= 0 || B <= 0 || C <= 0) throw new ArgumentException("Give positive sides");
+            if (A + B <= C || A + C <= B || B + C <= A) throw new ArgumentException("This is not a triangle");
+
             this.A = A;
             this.B = B;
-            C = C;
+            // C -> this.C
+            this.C = C;
         }
 
         // Pole trójkąta jest liczone wzorem Herona
         // https://pl.wikipedia.org/wiki/Wz%C3%B3r_Herona
 
-        public override double CalculateArea()
+        // Removed override (interface methods don't require overriding)
+        public double CalculateArea()
         {
             double p = this.CalculatePerimeter() / 2;
-            return System.Math.Sqrt(p * (p - A) * (p - B) * (p - C));
+            return Math.Sqrt(p * (p - A) * (p - B) * (p - C));
         }
 
         public double CalculatePerimeter()

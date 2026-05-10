@@ -1,12 +1,17 @@
-﻿namespace Blocks_Main
+﻿using System;
+
+namespace Blocks_Main
 {
-    public class Square :NamedObject,IShape
+    public class Square : NamedObject,IShape
     {
         public double Side { get; private set; }
 
-        public Square(int v):this("kwadrat")
+        // :this("kwadrat") -> :base(kwadrat) --- 'this' use constructor of same class, base use constructor of base class
+        // int Side -> double Side
+        public Square(double Side):base("kwadrat")
         {
-            this.Side = v;
+            if (Side <= 0) throw new ArgumentException("Give side greater than 0");
+            this.Side = Side;
         }
 
         public double CalculateArea()
@@ -16,7 +21,13 @@
 
         public override string ToString()
         {
-            return base.ToString() + " o boku " + Side.ToString();
+            return base.ToString() + " o boku " + Side;
+        }
+
+        // Add IShape method: CalculatePerimeter()
+        public double CalculatePerimeter()
+        {
+            return Side * 4;
         }
     }
 }

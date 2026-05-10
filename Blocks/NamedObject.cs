@@ -9,12 +9,13 @@
         {
         }
 
-        public NamedObject (string name)
+        public NamedObject (string Name)
         {
-            Name = name;
+            this.Name = Name;
         }
 
-        public override int ToString()
+        // int -> string
+        public override string ToString()
         {
             return Name;
         }

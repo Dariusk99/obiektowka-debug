@@ -1,28 +1,34 @@
-﻿namespace Blocks_Main
+﻿//Changed <ImplicitUsings>true</ImplicitUsings> to false for clean code and delete System. near methods
+using System;
+
+namespace Blocks_Main
 {
     public class Circle:NamedObject,IShape
     {
         public double Radius { get; private set;}
 
-        public Circle(double r):base("koło")
+        public Circle(double Radius):base("koło")
         {
-            Radius = r;
+            if (Radius <= 0) 
+                throw new ArgumentException("Give positive radius greater than 0");
+
+            this.Radius = Radius;
         }
 
         public double CalculateArea()
         {
-            return Radius * Radius * System.Math.PI;
+            return Radius * Radius * Math.PI;
         }
 
         public override string ToString()
         {
-            return base.ToString()+" o promieniu "+Radius.ToString();
+            return base.ToString() + " o promieniu " + Radius.ToString();
         }
 
 
         public double CalculatePerimeter()
         {
-            return 2*System.Math.PI*Radius;
+            return 2 * Math.PI*Radius;
         }
     }
 }

@@ -2,7 +2,7 @@
 {
     public interface IShape
     {
-        double perimeter;
+        // Remove field perimeter - interfaces cannot have fields
         public double CalculateArea();
         public double CalculatePerimeter();
 

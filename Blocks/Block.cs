@@ -1,26 +1,37 @@
-﻿namespace Blocks_Main
+﻿using System;
+
+namespace Blocks_Main
 {
     public class Block:IBlock
     {
-        public static string evaluateSize(Block b)
+        // PascalCase evaluate -> Evaluate
+        public static string EvaluateSize(Block b)
         {
-            if (b.calculateVolume() > 200)
+            // redundant method call. returned value stored in variable
+            double volume = b.CalculateVolume();
+
+            if (volume > 200)
                 return "Bloczek jest duży";
-            else if (b.calculateVolume() > 100)
+            else if (volume > 100)
                 return "Bloczek jest średni";
             else
                 return "Bloczek jest mały";
         }
 
-        public int Height { get; private set;}
+        public double Height { get; private set; }
         public IShape BaseShape { get; private set; }
 
-        public Block(int Height, IShape b) 
+        //int -> double Height
+        public Block(double Height, IShape BaseShape) 
         {
+            if (Height <= 0) throw new ArgumentException("Give positive height grater than 0");
+            if (BaseShape == null) throw new ArgumentNullException("Base shape is null");
+
             this.Height = Height;
-            BaseShape = b;
+            this.BaseShape = BaseShape;
         }
-        public double calculateVolume()
+        
+        public double CalculateVolume()
         {
             return Height * BaseShape.CalculateArea();
         }
@@ -29,7 +40,5 @@
         {
             return $"Bloczek o podstawie {BaseShape.ToString()} i wysokości {Height} ";
         }
-
-        
     }
 }

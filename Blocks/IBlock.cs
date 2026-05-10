@@ -2,6 +2,7 @@
 {
     public interface IBlock
     {
-        public double calculateVolume();
+        // c -> C, PascalCase...
+        public double CalculateVolume();
     }
 }
